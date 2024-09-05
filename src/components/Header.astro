@@ -4,12 +4,16 @@
       <div id="logo" class="font-bold"><a href="#link1">Site logo</a></div>
       <nav id="desktopmenu" class="hidden lg:block">
         <ul class="flex flex-row gap-4">
-          <li class="hover:text-red-500"><a href="#top">Toppen</a></li>
-          <li class="hover:text-red-500"><a href="#chapters">Bogens kapitler</a></li>
-          <li class="hover:text-red-500"><a href="#reviews">Anmeldelser</a></li>
-          <li class="hover:text-red-500"><a href="#images_from_the_book">Billeder fra bogen</a></li>
-          <li class="hover:text-red-500"><a href="#author">Forfatteren</a></li>
-          <li class="hover:text-red-500"><a href="#buy">Køb nu</a></li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline"><a href="#top">Toppen</a></li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+            <a href="#chapters">Bogens kapitler</a>
+          </li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline"><a href="#reviews">Anmeldelser</a></li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+            <a href="#images_from_the_book">Billeder fra bogen</a>
+          </li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline"><a href="#author">Forfatteren</a></li>
+          <li class="hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline"><a href="#buy">Køb nu</a></li>
         </ul>
       </nav>
       <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
@@ -27,12 +31,24 @@
       x-on:click.outside="showmenu = false"
     >
       <ul>
-        <li class="text-center py-2 border-y-2 hover:text-red-500"><a href="#top">Toppen</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-red-500"><a href="#chapters">Bogens kapitler</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-red-500"><a href="#reviews">Anmeldelser</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-red-500"><a href="#images_from_the_book">Billeder fra bogen</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-red-500"><a href="#author">Forfatteren</a></li>
-        <li class="text-center py-2 hover:text-red-500"><a href="#buy">Køb nu</a></li>
+        <li class="text-center py-2 border-y-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#top">Toppen</a>
+        </li>
+        <li class="text-center py-2 border-b-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#chapters">Bogens kapitler</a>
+        </li>
+        <li class="text-center py-2 border-b-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#reviews">Anmeldelser</a>
+        </li>
+        <li class="text-center py-2 border-b-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#images_from_the_book">Billeder fra bogen</a>
+        </li>
+        <li class="text-center py-2 border-b-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#author">Forfatteren</a>
+        </li>
+        <li class="text-center py-2 hover:text-red-500 hover:-translate-y-1 hover:scale-100 duration-300 hover:underline">
+          <a href="#buy">Køb nu</a>
+        </li>
       </ul>
     </nav>
   </div>

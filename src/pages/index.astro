@@ -7,16 +7,14 @@ import Formular from "../components/Formular.astro";
 <MainLayout title="Københavnerbilleder - en guide til hipster fotos">
   <!-- Top section -->
 
-  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 text-slate-700">
+  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 pt-8 text-slate-700 animate__animated animate__fadeInLeft">
     <div class="col-span-1">
-      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg scale-up-hor-left" />
+      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg" />
     </div>
-    <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg scale-up-hor-left">
-      <h1 class="text-center md:text-left md:text-3xl font-bold text-slate-700 animate__animated animate__fadeIn">
-        Københavnerbilleder - en guide til hipster foto
-      </h1>
-      <h2 class="text-center md:text-xl md:text-left font-bold pb-3 text-slate-700 animate__animated animate__fadeIn">af Sten Simons</h2>
-      <p class="text-slate-700 pb-8 text-center md:text-left animate__animated animate__fadeIn">
+    <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg">
+      <h1 class="text-center md:text-left md:text-3xl font-bold text-slate-700">Københavnerbilleder - en guide til hipster foto</h1>
+      <h2 class="text-center md:text-xl md:text-left font-bold pb-3 text-slate-700">af Sten Simons</h2>
+      <p class="text-slate-700 pb-8 text-center md:text-left">
         <em>Københavnerbilleder</em> er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige
         aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!
       </p>
@@ -27,7 +25,7 @@ import Formular from "../components/Formular.astro";
   </section>
 
   <!-- Mid section (text) -->
-  <section class="max-w-3xl mx-auto pb-6">
+  <section class="max-w-3xl mx-auto pb-6 animate__animated animate__fadeInLeft">
     <section class="max-w-2xl mx-auto flex justify-center">
       <div class="col-span-1 p-4 text-right text-sm text-slate-400">
         Titel: Københavnerbilleder - en guide til hipster foto <br /> Forfatter: Sten Simons <br />Antal sider: 344
@@ -37,7 +35,7 @@ import Formular from "../components/Formular.astro";
   </section>
 
   <!--  Mid section (img) -->
-  <section class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-10 scale-up-hor-left">
+  <section class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-10 animate__animated animate__fadeInLeft">
     <div class="col-span-1">
       <img src="/billeder_bogen/kobenhavnerbilleder-sten-simons.webp" alt="" class="h-full w-auto rounded-md" />
     </div>
@@ -51,11 +49,11 @@ import Formular from "../components/Formular.astro";
   <br />
   <hr />
   <!--  Mid section (chapters) -->
-  <section id="chapters" class="max-w-3xl mx-auto text-slate-700">
+  <section id="chapters" class="max-w-3xl mx-auto text-slate-700 animate__animated animate__fadeInLeft">
     <div class="header">
-      <h2 class="text-center md:text-left font-bold pl-4 pt-12 text-xl animate__animated animate__fadeInLeft">Bogens kapitler</h2>
+      <h2 class="text-center md:text-left font-bold pl-4 pt-12 text-xl">Bogens kapitler</h2>
     </div>
-    <section class="max-w-7xl mx-auto grid md:grid-cols-2 text-center md:text-left animate__animated animate__fadeInLeft">
+    <section class="max-w-7xl mx-auto grid md:grid-cols-2 text-center md:text-left">
       <div class="col-span-1 p-4">
         <h2 class="font-bold">Kapitel 1 - Intro til street foto</h2><p>
           "Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en
@@ -304,7 +302,7 @@ import Formular from "../components/Formular.astro";
     <!-- h2 aligned with the image -->
     <h2 class="text-xl font-bold pl-4 md:pl-0 text-center md:text-left">Forfatteren</h2>
 
-    <div class="flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 mx-auto max-w-5xl scale-up-hor-left">
+    <div class="flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 mx-auto max-w-5xl">
       <!-- Column 1: Image -->
       <div class="col-span-1 flex justify-center md:justify-start items-center">
         <img src="/billeder_bogen/sten_simons.webp" alt="forfatteren" class="rounded-md object-cover w-72 h-72 md:w-96 md:h-96" />
@@ -322,7 +320,7 @@ import Formular from "../components/Formular.astro";
     </div>
   </section>
   <hr />
-  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10">
+  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10 animate__animated animate__fadeInLeft">
     <Formular />
   </section>
   <hr />
@@ -363,20 +361,4 @@ import Formular from "../components/Formular.astro";
       }
     }
   </style>
-
-  <script>
-    import { inView } from "motion";
-
-    const elementmedanimation1 = document.querySelector(".elementmedanimation1");
-
-    inView(elementmedanimation1, () => {
-      elementmedanimation1.classList.add("animate__animated", "animate__bounceInDown", "animate__delay-1s");
-    });
-
-    const elementmedanimation2 = document.querySelector(".elementmedanimation2");
-
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft");
-    });
-  </script>
 </MainLayout>
