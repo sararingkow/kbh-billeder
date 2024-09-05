@@ -1,23 +1,19 @@
----
-
----
-
-<header bg-slate-200>
-  <div x-data="{ showmenu: false }" class="p-6 static lg:static w-full">
+<header class="bg-slate-100 fixed top-0 left-0 w-full z-50">
+  <div x-data="{ showmenu: false }" class="p-6">
     <div id="navbar" class="flex flex-row justify-between">
       <div id="logo" class="font-bold"><a href="#link1">Site logo</a></div>
       <nav id="desktopmenu" class="hidden lg:block">
         <ul class="flex flex-row gap-4">
-          <li class="hover:text-red-500"><a href="#link1">Toppen</a></li>
-          <li class="hover:text-red-500"><a href="#link2">Bogens kapitler</a></li>
-          <li class="hover:text-red-500"><a href="#link3">Anmeldelser</a></li>
-          <li class="hover:text-red-500"><a href="#link4">Billeder fra bogen</a></li>
-          <li class="hover:text-red-500"><a href="#link5">Forfatteren</a></li>
-          <li class="hover:text-red-500"><a href="#link6">Køb nu</a></li>
+          <li class="hover:text-red-500"><a href="#top">Toppen</a></li>
+          <li class="hover:text-red-500"><a href="#chapters">Bogens kapitler</a></li>
+          <li class="hover:text-red-500"><a href="#reviews">Anmeldelser</a></li>
+          <li class="hover:text-red-500"><a href="#images_from_the_book">Billeder fra bogen</a></li>
+          <li class="hover:text-red-500"><a href="#author">Forfatteren</a></li>
+          <li class="hover:text-red-500"><a href="#buy">Køb nu</a></li>
         </ul>
       </nav>
-      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-        ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
@@ -26,10 +22,9 @@
       id="mobilmenu"
       class="flex flex-col content-center pt-4"
       x-show="showmenu"
-      x-transition=""
+      x-transition
       x-on:click="showmenu = false"
       x-on:click.outside="showmenu = false"
-      style="display: none;"
     >
       <ul>
         <li class="text-center py-2 border-y-2 hover:text-red-500"><a href="#link1">Toppen</a></li>
@@ -42,3 +37,10 @@
     </nav>
   </div>
 </header>
+
+<!-- Add this CSS to push the content below the header -->
+<style>
+  body {
+    padding-top: 80px; /* Adjust this value based on the height of your header */
+  }
+</style>

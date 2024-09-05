@@ -1,24 +1,29 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Formular from "../components/Formular.astro";
 import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Københavnerbilleder - en guide til hipster fotos">
   <!-- Top section -->
 
-  <section class="grid md:grid-cols-3 gap-4 pb-4 text-slate-700">
+  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 text-slate-700">
     <div class="col-span-1">
       <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg scale-up-hor-left" />
     </div>
     <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg scale-up-hor-left">
-      <h1 class="md:text-3xl font-bold text-slate-700 animate__animated animate__fadeIn">Københavnerbilleder - en guide til hipster foto</h1>
-      <h2 class="md:text-xl font-bold pb-3 text-slate-700 animate__animated animate__fadeIn">af Sten Simons</h2>
-      <p class="text-slate-700 pb-8 animate__animated animate__fadeIn">
+      <h1 class="text-center md:text-left md:text-3xl font-bold text-slate-700 animate__animated animate__fadeIn">
+        Københavnerbilleder - en guide til hipster foto
+      </h1>
+      <h2 class="text-center md:text-xl md:text-left font-bold pb-3 text-slate-700 animate__animated animate__fadeIn">af Sten Simons</h2>
+      <p class="text-slate-700 pb-8 text-center md:text-left animate__animated animate__fadeIn">
         <em>Københavnerbilleder</em> er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige
         aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!
       </p>
-      <Button variant="primary" size="small">Tag et smugkig her!</Button>
+      <div class="flex justify-center md:justify-start">
+        <Button variant="primary" size="small">Tag et smugkig her!</Button>
+      </div>
     </div>
   </section>
 
@@ -44,11 +49,14 @@ import Link from "../components/Link.astro";
       <img src="/billeder_bogen/kobenhavnerbilleder_aaben_venstre.webp" alt="" class="h-full w-auto rounded-md" />
     </div>
   </section>
-
+  <br />
+  <hr />
   <!--  Mid section (chapters) -->
-  <section class="max-w-3xl mx-auto text-slate-700">
-    <div class="header"><h2 class="font-bold pl-4 pt-12 text-xl animate__animated animate__fadeInLeft">Bogens kapitler</h2></div>
-    <section class="max-w-7xl mx-auto grid md:grid-cols-2 animate__animated animate__fadeInLeft">
+  <section id="chapters" class="max-w-3xl mx-auto text-slate-700">
+    <div class="header">
+      <h2 class="text-center md:text-left font-bold pl-4 pt-12 text-xl animate__animated animate__fadeInLeft">Bogens kapitler</h2>
+    </div>
+    <section class="max-w-7xl mx-auto grid md:grid-cols-2 text-center md:text-left animate__animated animate__fadeInLeft">
       <div class="col-span-1 p-4">
         <h2 class="font-bold">Kapitel 1 - Intro til street foto</h2><p>
           "Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en
@@ -105,10 +113,10 @@ import Link from "../components/Link.astro";
   <br />
   <hr />
   <!-- Bottom section (reviews) -->
-  <section class="max-w-5xl mx-auto animate__animated animate__fadeInLeft">
-    <div class="header"><h2 class="font-bold pl-4 pt-12 text-xl">Anmeldelser</h2></div>
+  <section id="reviews" class="max-w-5xl mx-auto animate__animated animate__fadeInLeft">
+    <div class="header"><h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 text-xl">Anmeldelser</h2></div>
     <section class="max-w-5xl mx-auto md:grid grid-cols-3">
-      <div class="col-span-1 p-4 text-sm">
+      <div class="col-span-1 p-4 text-sm text-center md:text-left">
         <div class="flex justify-start pb-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path
@@ -155,7 +163,7 @@ import Link from "../components/Link.astro";
           >
         </p>
       </div>
-      <div class="col-span-1 p-4 text-sm">
+      <div class="col-span-1 p-4 text-sm text-center md:text-left">
         <div class="flex justify-start pb-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path
@@ -199,7 +207,7 @@ import Link from "../components/Link.astro";
           >
         </p>
       </div>
-      <div class="col-span-1 p-4 text-sm">
+      <div class="col-span-1 p-4 text-sm text-center md:text-left">
         <div class="flex justify-start pb-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path
@@ -250,8 +258,8 @@ import Link from "../components/Link.astro";
   <br />
   <hr />
   <!-- Bottom section (img) -->
-  <section class="max-w-3xl mx-auto animate__animated animate__fadeInLeft">
-    <div class="header"><h2 class="font-bold text-lg pt-8 pl-4">Billeder fra bogen</h2></div>
+  <section id="images_from_the_book" class="pb-10 max-w-3xl mx-auto animate__animated animate__fadeInLeft">
+    <div class="header"><h2 class="text-xl font-bold md:pl-0 pt-10 text-center md:text-left">Billeder fra bogen</h2></div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-4 justify-center pt-8 gap-4">
       <div class="col-span-1">
         <img src="/billeder_fra_bogen/_6090022.webp" alt="" class="h-48 w-96 rounded-md object-cover" />
@@ -291,14 +299,20 @@ import Link from "../components/Link.astro";
       </div>
     </section>
   </section>
+  <hr />
   <!-- Bottom section (text) -->
-  <section class="max-w-6xl grid md:grid-cols-3 grid-justify-center gap-4 pb-4 pt-20 animate__animated animate__fadeInLeft">
-    <div class="col-1">
-      <img src="/billeder_bogen/sten_simons.webp" alt="" class="w-80 h-80 rounded-md md:object-cover" />
-    </div>
-    <div class="col-span-2 md:grid content-center scale-up-hor-left">
-      <h2 class="md:text-xl font-bold text-slate-700">Forfatteren</h2>
-      <p class="text-slate-700 pb-8">
+  <section id="author" class="flex flex-col gap-4 pb-10 pt-10 mx-auto max-w-5xl animate__animated animate__fadeInLeft">
+    <!-- h2 aligned with the image -->
+    <h2 class="text-xl font-bold pl-4 md:pl-0 text-center md:text-left">Forfatteren</h2>
+
+    <div class="flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 mx-auto max-w-5xl scale-up-hor-left">
+      <!-- Column 1: Image -->
+      <div class="col-span-1 flex justify-center md:justify-start items-center">
+        <img src="/billeder_bogen/sten_simons.webp" alt="forfatteren" class="rounded-md object-cover w-72 h-72 md:w-96 md:h-96" />
+      </div>
+
+      <!-- Column 2: Paragraph -->
+      <p class="text-slate-700 pb-8 col-span-1 text-center md:text-left">
         Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens
         forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog <em>Ungdomsdruk - pinlige billeder fra nattelivet</em>.
         Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.”
@@ -308,6 +322,48 @@ import Link from "../components/Link.astro";
       </p>
     </div>
   </section>
+  <hr />
+  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10">
+    <Formular />
+  </section>
+  <hr />
+  <style>
+    /* Base size for SVG and responsive design for different screen sizes */
+    svg.size-6 {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust SVG size for smaller screens */
+      svg.size-6 {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+      /* Center-align stars on small screens */
+      .flex {
+        justify-content: center !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Make SVGs even smaller for mobile */
+      svg.size-6 {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      /* Reduce padding on smaller screens */
+      .p-4 {
+        padding: 1rem;
+      }
+
+      /* Make text more compact */
+      .text-sm {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
 
   <script>
     import { inView } from "motion";

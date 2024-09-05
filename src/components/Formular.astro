@@ -1,0 +1,81 @@
+---
+import Button from "./Button.astro";
+---
+
+<body class="bg-slate-400 flex items-center justify-center min-h-screen">
+  <div class="bg-transparent md:border border-gray-300 text-slate-700 p-8 rounded-lg shadow-xl w-full max-w-lg">
+    <!-- Header -->
+    <div class="text-center mb-6">
+      <h2 class="text-xl font-bold">Køb bogen nu!</h2>
+    </div>
+
+    <form class="space-y-6">
+      <!-- Antal and Valuta -->
+      <div class="space-y-2">
+        <div class="flex flex-col">
+          <label for="antal" class="font-semibold">Antal:</label>
+          <input type="number" id="antal" placeholder="1" class="border border-gray-300 rounded-md p-2 w-full" />
+        </div>
+      </div>
+
+      <!-- Levering -->
+      <fieldset class="space-y-2">
+        <legend class="font-semibold">Levering:</legend>
+        <div class="flex flex-col space-y-1">
+          <label class="flex items-center">
+            <input type="radio" id="postnord" name="levering" value="postnord" class="mr-2" />
+            PostNord
+          </label>
+          <label class="flex items-center">
+            <input type="radio" id="dao" name="levering" value="dao" class="mr-2" />
+            DAO
+          </label>
+          <label class="flex items-center">
+            <input type="radio" id="gls" name="levering" value="gls" class="mr-2" />
+            GLS
+          </label>
+          <label class="flex items-center">
+            <input type="radio" id="bring" name="levering" value="bring" class="mr-2" />
+            Bring
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Contact Information -->
+      <div class="space-y-4">
+        <div class="flex flex-col">
+          <label for="name" class="font-semibold"></label>
+          <input type="text" id="fname" name="name" placeholder="Navn" class="border border-gray-300 rounded-md p-2 w-full" />
+        </div>
+        <div class="flex flex-col">
+          <label for="address" class="font-semibold"></label>
+          <input type="text" id="address" name="address" placeholder="Adresse" class="border border-gray-300 rounded-md p-2 w-full" />
+        </div>
+        <div class="flex flex-col">
+          <label for="email" class="font-semibold"></label>
+          <input type="email" id="email" name="email" placeholder="Email" class="border border-gray-300 rounded-md p-2 w-full" />
+        </div>
+        <div class="flex flex-col">
+          <label for="city" class="font-semibold"></label>
+          <div class="flex gap-2">
+            <input type="text" id="cname" name="city" placeholder="By" class="border border-gray-300 rounded-md p-2 w-full" />
+            <input type="text" id="postal" name="postal" placeholder="Postnummer" class="border border-gray-300 rounded-md p-2 w-full" />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <label for="phone" class="font-semibold"></label>
+          <input type="text" id="phone" name="phone" placeholder="Telefonnummer" class="border border-gray-300 rounded-md p-2 w-full" />
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" name="accept" value="yes" id="accept" class="mr-2" />
+          <label for="accept" class="font-semibold">Modtag nyhedsbrev?</label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <Button variant="primary" size="small">KØB</Button>
+      </div>
+    </form>
+  </div>
+</body>
