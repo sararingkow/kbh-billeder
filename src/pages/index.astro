@@ -9,12 +9,12 @@ import Link from "../components/Link.astro";
 
   <section class="grid md:grid-cols-3 gap-4 pb-4 text-slate-700">
     <div class="col-span-1">
-      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg" />
+      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg scale-up-hor-left" />
     </div>
-    <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg">
-      <h1 class="md:text-3xl font-bold text-slate-700">Københavnerbilleder - en guide til hipster foto</h1>
-      <h2 class="md:text-xl font-bold pb-3 text-slate-700">af Sten Simons</h2>
-      <p class="text-slate-700 pb-8">
+    <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg scale-up-hor-left">
+      <h1 class="md:text-3xl font-bold text-slate-700 animate__animated animate__fadeIn">Københavnerbilleder - en guide til hipster foto</h1>
+      <h2 class="md:text-xl font-bold pb-3 text-slate-700 animate__animated animate__fadeIn">af Sten Simons</h2>
+      <p class="text-slate-700 pb-8 animate__animated animate__fadeIn">
         <em>Københavnerbilleder</em> er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige
         aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!
       </p>
@@ -33,7 +33,7 @@ import Link from "../components/Link.astro";
   </section>
 
   <!--  Mid section (img) -->
-  <section class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-10">
+  <section class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-10 scale-up-hor-left">
     <div class="col-span-1">
       <img src="/billeder_bogen/kobenhavnerbilleder-sten-simons.webp" alt="" class="h-full w-auto rounded-md" />
     </div>
@@ -47,8 +47,8 @@ import Link from "../components/Link.astro";
 
   <!--  Mid section (chapters) -->
   <section class="max-w-3xl mx-auto text-slate-700">
-    <div class="header"><h2 class="font-bold pl-4 pt-12 text-xl">Bogens kapitler</h2></div>
-    <section class="max-w-7xl mx-auto grid md:grid-cols-2">
+    <div class="header"><h2 class="font-bold pl-4 pt-12 text-xl animate__animated animate__fadeInLeft">Bogens kapitler</h2></div>
+    <section class="max-w-7xl mx-auto grid md:grid-cols-2 animate__animated animate__fadeInLeft">
       <div class="col-span-1 p-4">
         <h2 class="font-bold">Kapitel 1 - Intro til street foto</h2><p>
           "Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en
@@ -105,7 +105,7 @@ import Link from "../components/Link.astro";
   <br />
   <hr />
   <!-- Bottom section (reviews) -->
-  <section class="max-w-5xl mx-auto">
+  <section class="max-w-5xl mx-auto animate__animated animate__fadeInLeft">
     <div class="header"><h2 class="font-bold pl-4 pt-12 text-xl">Anmeldelser</h2></div>
     <section class="max-w-5xl mx-auto md:grid grid-cols-3">
       <div class="col-span-1 p-4 text-sm">
@@ -250,7 +250,7 @@ import Link from "../components/Link.astro";
   <br />
   <hr />
   <!-- Bottom section (img) -->
-  <section class="max-w-3xl mx-auto">
+  <section class="max-w-3xl mx-auto animate__animated animate__fadeInLeft">
     <div class="header"><h2 class="font-bold text-lg pt-8 pl-4">Billeder fra bogen</h2></div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-4 justify-center pt-8 gap-4">
       <div class="col-span-1">
@@ -290,23 +290,38 @@ import Link from "../components/Link.astro";
         <img src="/billeder_fra_bogen/vinter-2021-med-lomo-smena-6.webp" alt="" class="h-48 w-96 rounded-md object-cover" />
       </div>
     </section>
-
-    <!-- Bottom section (text) -->
-    <section class="grid md:grid-cols-3 gap-8 pt-12 text-slate-700">
-      <div class="col-span-1">
-        <img src="/billeder_bogen/sten_simons.webp" alt="" class="w-96 h-48 rounded-lg object-cover" />
-      </div>
-      <div class="col-span-2 md:grid content-center">
-        <h2 class="md:text-xl font-bold text-slate-700">Forfatteren</h2>
-        <p class="text-slate-700 pb-8">
-          Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens
-          forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog <em>Ungdomsdruk - pinlige billeder fra nattelivet</em>.
-          Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.”
-          Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne <em>Scener fra S-toget</em>, <em
-            >Brun mad - en visuel odysse</em
-          >, og lærebogen <em>Fotografering for evnesvage.</em>
-        </p>
-      </div>
-    </section>
   </section>
+  <!-- Bottom section (text) -->
+  <section class="max-w-6xl grid md:grid-cols-3 grid-justify-center gap-4 pb-4 pt-20 animate__animated animate__fadeInLeft">
+    <div class="col-1">
+      <img src="/billeder_bogen/sten_simons.webp" alt="" class="w-80 h-80 rounded-md md:object-cover" />
+    </div>
+    <div class="col-span-2 md:grid content-center scale-up-hor-left">
+      <h2 class="md:text-xl font-bold text-slate-700">Forfatteren</h2>
+      <p class="text-slate-700 pb-8">
+        Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens
+        forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog <em>Ungdomsdruk - pinlige billeder fra nattelivet</em>.
+        Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.”
+        Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne <em>Scener fra S-toget</em>, <em
+          >Brun mad - en visuel odysse</em
+        >, og lærebogen <em>Fotografering for evnesvage.</em>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    import { inView } from "motion";
+
+    const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__bounceInDown", "animate__delay-1s");
+    });
+
+    const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+  </script>
 </MainLayout>
