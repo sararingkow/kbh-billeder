@@ -7,9 +7,9 @@ import Formular from "../components/Formular.astro";
 <MainLayout title="Københavnerbilleder - en guide til hipster fotos">
   <!-- Top section -->
 
-  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 pt-8 text-slate-700">
-    <div class="col-span-1">
-      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg" />
+  <section id="top" class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4 pt-8 text-slate-700">
+    <div class="col-span-1 flex justify-center md:justify-start">
+      <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto object-cover rounded-lg max-w-xs md:max-w-none" />
     </div>
     <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg">
       <h1 class="text-center md:text-left md:text-3xl font-bold text-slate-700">Københavnerbilleder - en guide til hipster foto</h1>
@@ -27,10 +27,12 @@ import Formular from "../components/Formular.astro";
   <!-- Mid section (text) -->
   <section id="info" class="max-w-3xl mx-auto pb-6">
     <section class="max-w-2xl mx-auto flex justify-center">
-      <div class="col-span-1 p-4 text-right text-sm text-slate-400">
+      <div class="col-span-1 p-4 text-right text-sm text-slate-400 md:text-base">
         Titel: Københavnerbilleder - en guide til hipster foto <br /> Forfatter: Sten Simons <br />Antal sider: 344
       </div>
-      <div class="col-span-1 p-4 text-left text-sm text-slate-400">Forlag: Mellem Linjerne <br />ISBN: 987-6-987654-32-1 <br />Pris: 399.-</div>
+      <div class="col-span-1 p-4 text-left text-sm text-slate-400 md:text-base">
+        Forlag: Mellem Linjerne <br />ISBN: 987-6-987654-32-1 <br />Pris: 399.-
+      </div>
     </section>
   </section>
 
@@ -51,7 +53,7 @@ import Formular from "../components/Formular.astro";
   <!--  Mid section (chapters) -->
   <section id="chapters" class="max-w-3xl mx-auto text-slate-700">
     <div class="header">
-      <h2 class="text-center md:text-left font-bold pl-4 pt-12 text-xl">Bogens kapitler</h2>
+      <h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 text-xl">Bogens kapitler</h2>
     </div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-2 text-center md:text-left">
       <div class="col-span-1 p-4">
@@ -256,7 +258,7 @@ import Formular from "../components/Formular.astro";
   <hr />
   <!-- Bottom section (img) -->
   <section id="images_from_the_book" class="pb-10 max-w-3xl mx-auto">
-    <div class="header"><h2 class="text-xl font-bold md:pl-0 pt-10 text-center md:text-left">Billeder fra bogen</h2></div>
+    <div class="header"><h2 class="text-xl font-bold md:pl-0 pt-10 pl-4 pr-4 text-center md:text-left">Billeder fra bogen</h2></div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-4 justify-center pt-8 gap-4">
       <div class="col-span-1">
         <img src="/billeder_fra_bogen/_6090022.webp" alt="" class="h-48 w-96 rounded-md object-cover" />
@@ -300,7 +302,7 @@ import Formular from "../components/Formular.astro";
   <!-- Bottom section (text) -->
   <section id="author" class="flex flex-col gap-4 pb-10 pt-10 mx-auto max-w-5xl">
     <!-- h2 aligned with the image -->
-    <h2 class="text-xl font-bold pl-4 md:pl-0 text-center md:text-left">Forfatteren</h2>
+    <h2 class="text-xl font-bold md:pl-0 text-center md:text-left pl-4 pr-4">Forfatteren</h2>
 
     <div class="flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 mx-auto max-w-5xl">
       <!-- Column 1: Image -->
@@ -320,7 +322,7 @@ import Formular from "../components/Formular.astro";
     </div>
   </section>
   <hr />
-  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10">
+  <section id="buy" class="max-w-3xl mx-auto flex justify-center md:pt-14 pb-10 pt-8">
     <Formular />
   </section>
   <hr />

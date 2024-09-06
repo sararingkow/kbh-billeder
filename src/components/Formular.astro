@@ -3,7 +3,7 @@ import ButtonFormular from "./ButtonFormular.astro";
 ---
 
 <body class="bg-slate-400 flex items-center justify-center min-h-screen">
-  <div class="bg-transparent md:border border-gray-300 text-slate-700 p-8 rounded-lg shadow-xl w-full max-w-lg">
+  <div class="bg-transparent sm:border border-gray-300 text-slate-700 p-8 sm:rounded-lg sm:shadow-xl w-full max-w-lg sm:max-w-md md:max-w-lg">
     <!-- Header -->
     <div class="text-center mb-6">
       <h2 class="text-xl font-bold">Køb bogen nu!</h2>
@@ -57,16 +57,16 @@ import ButtonFormular from "./ButtonFormular.astro";
         </div>
         <div class="flex flex-col">
           <label for="city" class="font-semibold"></label>
-          <div class="flex gap-2">
+          <div class="flex flex-col sm:flex-row gap-2">
             <input type="text" id="cname" name="city" placeholder="By" class="border border-gray-300 rounded-md p-2 w-full" />
-            <input type="text" id="postal" name="postal" placeholder="Postnummer" class="border border-gray-300 rounded-md p-2 w-full" />
+            <input type="text" id="postal" name="postal" placeholder="Postnummer" class="border border-gray-300 rounded-md p-2 w-full sm:w-auto" />
           </div>
         </div>
         <div class="flex flex-col">
           <label for="phone" class="font-semibold"></label>
           <input type="text" id="phone" name="phone" placeholder="Telefonnummer" class="border border-gray-300 rounded-md p-2 w-full" />
         </div>
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-8">
           <input type="checkbox" name="accept" value="yes" id="accept" class="mr-2" />
           <label for="accept" class="font-semibold">Modtag nyhedsbrev?</label>
         </div>
