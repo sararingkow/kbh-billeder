@@ -7,7 +7,7 @@ import Formular from "../components/Formular.astro";
 <MainLayout title="Københavnerbilleder - en guide til hipster fotos">
   <!-- Top section -->
 
-  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 pt-8 text-slate-700 animate__animated animate__fadeInLeft">
+  <section id="top" class="grid md:grid-cols-3 gap-4 pb-4 pt-8 text-slate-700">
     <div class="col-span-1">
       <img src="/billeder_fra_bogen/_6090016.webp" alt="" class="w-full h-auto rounded-lg" />
     </div>
@@ -25,7 +25,7 @@ import Formular from "../components/Formular.astro";
   </section>
 
   <!-- Mid section (text) -->
-  <section class="max-w-3xl mx-auto pb-6 animate__animated animate__fadeInLeft">
+  <section id="info" class="max-w-3xl mx-auto pb-6">
     <section class="max-w-2xl mx-auto flex justify-center">
       <div class="col-span-1 p-4 text-right text-sm text-slate-400">
         Titel: Københavnerbilleder - en guide til hipster foto <br /> Forfatter: Sten Simons <br />Antal sider: 344
@@ -35,7 +35,7 @@ import Formular from "../components/Formular.astro";
   </section>
 
   <!--  Mid section (img) -->
-  <section class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-10 animate__animated animate__fadeInLeft">
+  <section id="images" class="max-w-7xl mx-auto grid md:grid-cols-3 justify-center gap-4 scale-in-hor-left">
     <div class="col-span-1">
       <img src="/billeder_bogen/kobenhavnerbilleder-sten-simons.webp" alt="" class="h-full w-auto rounded-md" />
     </div>
@@ -49,7 +49,7 @@ import Formular from "../components/Formular.astro";
   <br />
   <hr />
   <!--  Mid section (chapters) -->
-  <section id="chapters" class="max-w-3xl mx-auto text-slate-700 animate__animated animate__fadeInLeft">
+  <section id="chapters" class="max-w-3xl mx-auto text-slate-700">
     <div class="header">
       <h2 class="text-center md:text-left font-bold pl-4 pt-12 text-xl">Bogens kapitler</h2>
     </div>
@@ -110,7 +110,7 @@ import Formular from "../components/Formular.astro";
   <br />
   <hr />
   <!-- Bottom section (reviews) -->
-  <section id="reviews" class="max-w-5xl mx-auto animate__animated animate__fadeInLeft">
+  <section id="reviews" class="max-w-5xl mx-auto">
     <div class="header"><h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 text-xl">Anmeldelser</h2></div>
     <section class="max-w-5xl mx-auto md:grid grid-cols-3">
       <div class="col-span-1 p-4 text-sm text-center md:text-left">
@@ -255,7 +255,7 @@ import Formular from "../components/Formular.astro";
   <br />
   <hr />
   <!-- Bottom section (img) -->
-  <section id="images_from_the_book" class="pb-10 max-w-3xl mx-auto animate__animated animate__fadeInLeft">
+  <section id="images_from_the_book" class="pb-10 max-w-3xl mx-auto">
     <div class="header"><h2 class="text-xl font-bold md:pl-0 pt-10 text-center md:text-left">Billeder fra bogen</h2></div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-4 justify-center pt-8 gap-4">
       <div class="col-span-1">
@@ -298,7 +298,7 @@ import Formular from "../components/Formular.astro";
   </section>
   <hr />
   <!-- Bottom section (text) -->
-  <section id="author" class="flex flex-col gap-4 pb-10 pt-10 mx-auto max-w-5xl animate__animated animate__fadeInLeft">
+  <section id="author" class="flex flex-col gap-4 pb-10 pt-10 mx-auto max-w-5xl">
     <!-- h2 aligned with the image -->
     <h2 class="text-xl font-bold pl-4 md:pl-0 text-center md:text-left">Forfatteren</h2>
 
@@ -320,10 +320,12 @@ import Formular from "../components/Formular.astro";
     </div>
   </section>
   <hr />
-  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10 animate__animated animate__fadeInLeft">
+  <section id="buy" class="max-w-3xl mx-auto flex justify-center pt-14 pb-10">
     <Formular />
   </section>
   <hr />
+
+  <!--  CSS section (stars) -->
   <style>
     /* Base size for SVG and responsive design for different screen sizes */
     svg.size-6 {
@@ -361,4 +363,49 @@ import Formular from "../components/Formular.astro";
       }
     }
   </style>
+
+  <!--  JS section (animation) -->
+  <script>
+    import { inView } from "motion";
+
+    const elementmedanimation1 = document.querySelector("section#top");
+
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation2 = document.querySelector("section#chapters");
+
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation3 = document.querySelector("section#reviews");
+
+    inView(elementmedanimation3, () => {
+      elementmedanimation3.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation4 = document.querySelector("section#author");
+
+    inView(elementmedanimation4, () => {
+      elementmedanimation4.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation5 = document.querySelector("section#buy");
+
+    inView(elementmedanimation5, () => {
+      elementmedanimation5.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation6 = document.querySelector("section#info");
+    inView(elementmedanimation6, () => {
+      elementmedanimation6.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation7 = document.querySelector("section#images_from_the_book");
+    inView(elementmedanimation7, () => {
+      elementmedanimation7.classList.add("animate__animated", "animate__slideInLeft");
+    });
+  </script>
 </MainLayout>
