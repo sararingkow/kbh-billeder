@@ -14,7 +14,7 @@ import Formular from "../components/Formular.astro";
     <div class="col-span-2 md:grid content-center p-6 bg-slate-200 rounded-lg">
       <h1 class="text-center md:text-left md:text-3xl font-bold text-slate-700">Københavnerbilleder - en guide til hipster foto</h1>
       <h2 class="text-center md:text-xl md:text-left font-bold pb-3 text-slate-700">af Sten Simons</h2>
-      <p class="text-slate-700 pb-8 text-center md:text-left">
+      <p class="text-slate-700 pb-8 text-center md:text-left text-sm sm:text-base md:text-md lg:text-md">
         <em>Københavnerbilleder</em> er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige
         aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!
       </p>
@@ -51,9 +51,9 @@ import Formular from "../components/Formular.astro";
   <br />
   <hr />
   <!--  Mid section (chapters) -->
-  <section id="chapters" class="max-w-3xl mx-auto text-slate-700">
+  <section id="chapters" class="max-w-3xl mx-auto text-slate-700 text-sm sm:text-base md:text-md lg:text-md">
     <div class="header">
-      <h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 text-xl">Bogens kapitler</h2>
+      <h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 pb-4 text-xl">Bogens kapitler</h2>
     </div>
     <section class="max-w-7xl mx-auto grid md:grid-cols-2 text-center md:text-left">
       <div class="col-span-1 p-4">
@@ -113,7 +113,7 @@ import Formular from "../components/Formular.astro";
   <hr />
   <!-- Bottom section (reviews) -->
   <section id="reviews" class="max-w-5xl mx-auto">
-    <div class="header"><h2 class="text-center md:text-left font-bold pl-4 pr-4 pt-12 text-xl">Anmeldelser</h2></div>
+    <div class="header"><h2 class="text-center md:text-left font-bold pl-4 pr-4 pb-4 pt-12 text-xl">Anmeldelser</h2></div>
     <section class="max-w-5xl mx-auto md:grid grid-cols-3">
       <div class="col-span-1 p-4 text-sm text-center md:text-left">
         <div class="flex justify-start pb-4">
@@ -300,18 +300,16 @@ import Formular from "../components/Formular.astro";
   </section>
   <hr />
   <!-- Bottom section (text) -->
-  <section id="author" class="flex flex-col gap-4 pb-10 pt-10 mx-auto max-w-4xl">
+  <section id="author" class="flex flex-col gap-4 pt-10 pl-4 pr-4 mx-auto max-w-4xl text-slate-700 text-sm sm:text-base md:text-md lg:text-md">
     <!-- h2 aligned with the image -->
-    <h2 class="text-xl font-bold md:pl-0 text-center md:text-left pl-4 pr-4">Forfatteren</h2>
+    <h2 class="text-xl font-bold md:pl-0 text-center md:text-left pl-4 pr-4 pb-4">Forfatteren</h2>
 
     <div class="flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 mx-auto max-w-4xl">
-      <!-- Column 1: Image -->
       <div class="col-span-1 flex justify-center md:justify-start items-center">
         <img src="/billeder_bogen/sten_simons.webp" alt="forfatteren" class="rounded-md object-cover w-72 h-72 md:w-96 md:h-96" />
       </div>
 
-      <!-- Column 2: Paragraph -->
-      <p class="text-slate-700 pb-8 col-span-1 text-center md:text-left">
+      <p class="text-slate-700 pb-4 col-span-1 text-center md:text-left">
         Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens
         forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog <em>Ungdomsdruk - pinlige billeder fra nattelivet</em>.
         Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.”
@@ -322,7 +320,7 @@ import Formular from "../components/Formular.astro";
     </div>
   </section>
   <hr />
-  <section id="buy" class="max-w-3xl mx-auto flex justify-center md:pt-14 pb-10 pt-8">
+  <section id="buy" class="max-w-3xl mx-auto flex justify-center md:pt-14 pb-8 pt-4">
     <Formular />
   </section>
   <hr />
